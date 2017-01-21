@@ -1,0 +1,43 @@
+{
+  "name": "bugz",
+  "version": "0.0.1",
+  "description": "Composable User Agent Detection",
+  "main": "bundle/bugz.umd.js",
+  "module": "bundle/bugz.module.js",
+  "jsnext:main": "bundle/bugz.module.js",
+  "scripts": {
+    "start": "npm run test -- --watch",
+    "test": "jest --testEnvironment node",
+    "build": "npm run clean && npm run copy && npm run build:index && npm run build:bundle && npm run build:cjs",
+    "clean": "rm -rf dist",
+    "copy": "mkdir -p dist && cp package.json dist/package.json",
+    "build:bundle": "rollup --config",
+    "build:cjs": "babel src --ignore __tests__ --out-dir dist",
+    "build:index": "node scripts/generateIndex.js > src/index.js",
+    "format": "prettier --single-quote --write src/*.js src/**/*.js test/*.js test/**/*.js scripts/*.js scripts/**/*.js",
+    "lint": "eslint src/** test/** scripts/**"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-jest": "^18.0.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babelrc-rollup": "^3.0.0",
+    "eslint": "^3.14.1",
+    "jest": "^18.1.0",
+    "prettier": "^0.11.0",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0"
+  },
+  "dependencies": {
+    "ramda": "^0.23.0",
+    "ua-parser-js": "^0.7.12"
+  }
+}
