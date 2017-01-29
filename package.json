@@ -31,13 +31,16 @@
     "eslint": "^3.14.1",
     "jest": "^18.1.0",
     "prettier": "^0.11.0",
+    "ramda": "^0.23.0",
     "rollup": "^0.41.4",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^7.0.0",
     "rollup-plugin-node-resolve": "^2.0.0"
   },
+  "peerDependencies": {
+    "ramda": "*"
+  },
   "dependencies": {
-    "ramda": "^0.23.0",
     "ua-parser-js": "^0.7.12"
   }
 }
