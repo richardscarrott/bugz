@@ -10,7 +10,7 @@
     "test": "jest --testEnvironment node",
     "build": "npm run clean && npm run copy && npm run build:index && npm run build:bundle && npm run build:cjs",
     "clean": "rm -rf dist",
-    "copy": "mkdir -p dist && cp package.json dist/package.json",
+    "copy": "mkdir -p dist && cp package.json dist/package.json cp README.md dist/package.json",
     "build:bundle": "rollup --config",
     "build:cjs": "babel src --ignore __tests__ --out-dir dist",
     "build:index": "node scripts/generateIndex.js > src/index.js",
@@ -20,8 +20,33 @@
   "jest": {
     "testEnvironment": "node"
   },
-  "author": "",
+  "keywords": [
+    "user-agent",
+    "detection",
+    "browser",
+    "engine",
+    "os",
+    "device",
+    "functional",
+    "composable",
+    "bugs",
+    "ramda"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/richardscarrott/bugz.git"
+  },
+  "author": {
+    "name": "Richard Scarrott",
+    "email": "riscarrott@googlemail.com"
+  },
   "license": "MIT",
+  "dependencies": {
+    "ua-parser-js": "^0.7.12"
+  },
+  "peerDependencies": {
+    "ramda": "*"
+  },
   "devDependencies": {
     "babel-cli": "^6.22.2",
     "babel-jest": "^18.0.0",
@@ -36,11 +61,5 @@
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^7.0.0",
     "rollup-plugin-node-resolve": "^2.0.0"
-  },
-  "peerDependencies": {
-    "ramda": "*"
-  },
-  "dependencies": {
-    "ua-parser-js": "^0.7.12"
   }
 }
