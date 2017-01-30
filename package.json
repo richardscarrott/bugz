@@ -7,7 +7,7 @@
   "jsnext:main": "bundle/bugz.module.js",
   "scripts": {
     "start": "npm run test -- --watch",
-    "test": "jest --testEnvironment node",
+    "test": "jest",
     "build": "npm run clean && npm run copy && npm run build:index && npm run build:bundle && npm run build:cjs",
     "clean": "rm -rf dist",
     "copy": "mkdir -p dist && cp package.json dist/package.json && cp README.md dist/README.md && cp LICENSE dist/LICENSE",
