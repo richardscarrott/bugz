@@ -13,7 +13,7 @@
     "copy": "mkdir -p dist && cp package.json dist/package.json && cp README.md dist/README.md && cp LICENSE dist/LICENSE",
     "build:bundle": "rollup --config",
     "build:cjs": "babel src --ignore __tests__ --out-dir dist",
-    "build:index": "node scripts/generateIndex.js > src/index.js",
+    "build:index": "babel-node scripts/generateIndex.js > src/index.js",
     "format": "prettier --single-quote --write src/*.js src/**/*.js test/*.js test/**/*.js scripts/*.js scripts/**/*.js",
     "lint": "eslint src/** test/** scripts/**"
   },
