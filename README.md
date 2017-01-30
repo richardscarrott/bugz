@@ -1,4 +1,4 @@
-# Bugz
+# Bugz [![Build Status](https://travis-ci.org/richardscarrott/bugz.svg?branch=master)](https://travis-ci.org/richardscarrott/bugz) [![npm version](https://badge.fury.io/js/bugz.svg)](https://badge.fury.io/js/bugz) [![Coverage Status](https://coveralls.io/repos/github/richardscarrott/bugz/badge.svg?branch=master)](https://coveralls.io/github/richardscarrott/bugz?branch=master)
 
 Composable user agent detection using [`Ramda`](http://ramdajs.com/), powered by [`ua-parser-js`](https://github.com/faisalman/ua-parser-js).
 
