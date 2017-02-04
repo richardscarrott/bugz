@@ -103,11 +103,11 @@ MIT
 
 ## TODO
 - [x] Move Ramda to peer dep.
-- [ ] Throw if `UA` is not passed in to `parse` as `ua-parser-js` fallsback to `window.navigator.userAgent` in a browser env.
+- [x] Throw if `UA` is not passed in to `parse` as `ua-parser-js` fallsback to `window.navigator.userAgent` in a browser env.
 - [ ] Add helper functions for popular browsers / engines and operating systems.
 - [ ] Document umd, cjs and esmodule builds.
 - [ ] Document API.
 - [ ] Provide more examples.
 - [ ] Add integration tests to test composability.
-- [ ] Hook up to Travis and Coveralls.
+- [x] Hook up to Travis and Coveralls.
 - [x] Publish.

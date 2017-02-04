@@ -1,4 +1,16 @@
-import { compose, drop, prop, match, take, curry } from 'ramda';
+import {
+  compose,
+  drop,
+  prop,
+  match,
+  take,
+  curry,
+  ifElse,
+  is,
+  identity
+} from 'ramda';
+
+const toString = ifElse(is(String), identity, () => '');
 
 const firstChar = str => str.charAt(0);
 
@@ -25,4 +37,9 @@ const trimChar = curry((char, val) => {
   return val;
 });
 
-export default compose(trimChar('.'), stripTrailingChars, stripLeadingChars);
+export default compose(
+  trimChar('.'),
+  stripTrailingChars,
+  stripLeadingChars,
+  toString
+);
