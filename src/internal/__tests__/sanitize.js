@@ -30,4 +30,18 @@ describe('sanitize', () => {
     expect(sanitize('?abc_')).toBe('');
     expect(sanitize('?ab._')).toBe('');
   });
+
+  it('handles non string input', () => {
+    expect(sanitize(void 0)).toBe('');
+    expect(sanitize(null)).toBe('');
+    expect(sanitize(false)).toBe('');
+    expect(sanitize(true)).toBe('');
+    expect(sanitize(0)).toBe('');
+    expect(sanitize(12)).toBe('');
+    expect(sanitize(/erm/)).toBe('');
+    expect(sanitize([])).toBe('');
+    expect(sanitize({})).toBe('');
+    expect(sanitize(Object.create(null))).toBe('');
+    expect(sanitize(new Date())).toBe('');
+  });
 });
