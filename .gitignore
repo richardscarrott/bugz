@@ -1,6 +1,9 @@
 # Build
 dist
 
+# Notes
+notes
+
 # Logs
 logs
 *.log
