@@ -11,7 +11,7 @@ npm install bugz
 
 ## API
 
-```
+```js
 import {
     about,
     getBrowser,
@@ -57,7 +57,7 @@ import {
 
 ### Usage
 
-```
+```js
 import { allPass } from 'ramda';
 import {
     isOSName,
@@ -83,25 +83,19 @@ const isIOS7Chrome = allPass([
 ]);
 
 isIOS7Safari(
-	'Mozilla/5.0 (iPhone; CPU iPhone OS 7_1 like Mac OS X) AppleWebKit/601.1.46
-    (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+	'Mozilla/5.0 (iPhone; CPU iPhone OS 7_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
 ); // => true
 
 isIOS7Chrome(
-    'Mozilla/5.0 (iPhone; CPU iPhone OS 7_1 like Mac OS X) AppleWebKit/601.1.46
-    (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 7_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
 ); // => false
 
 isIOS7Safari(
-    'Mozilla/5.0 (iPhone; U; CPU iPhone OS 7_1_1 like Mac OS X; en-gb)
-    AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206
-    Safari/7534.48.3'
+    'Mozilla/5.0 (iPhone; U; CPU iPhone OS 7_1_1 like Mac OS X; en-gb) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3'
 ); // => false
 
 isIOS7Chrome(
-    'Mozilla/5.0 (iPhone; U; CPU iPhone OS 7_1_1 like Mac OS X; en-gb)
-    AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206
-    Safari/7534.48.3'
+    'Mozilla/5.0 (iPhone; U; CPU iPhone OS 7_1_1 like Mac OS X; en-gb) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3'
 ); // => true
 ```
 
