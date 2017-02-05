@@ -13,7 +13,7 @@ npm install bugz
 
 ```
 import {
-    about
+    about,
     getBrowser,
     getBrowserName,
     getBrowserVersion,
@@ -23,19 +23,24 @@ import {
     getOS,
     getOSName,
     getOSVersion,
+    isAndroidBrowser,
     isBrowserName,
     isBrowserVersion,
     isBrowserVersionGt,
     isBrowserVersionGte,
     isBrowserVersionLt,
     isBrowserVersionLte,
-    isDesktopSafari,
+    isChrome,
+    isEdge,
     isEngineName,
     isEngineVersion,
     isEngineVersionGt,
     isEngineVersionGte,
     isEngineVersionLt,
     isEngineVersionLte,
+    isFirefox,
+    isIE,
+    isIEMobile,
     isMobileSafari,
     isOSName,
     isOSVersion,
@@ -43,8 +48,10 @@ import {
     isOSVersionGte,
     isOSVersionLt,
     isOSVersionLte,
+    isOpera,
+    isOperaMobile,
     isSafari,
-    parse,
+    parse
 } from 'bugz';
 ```
 
@@ -104,7 +111,9 @@ MIT
 ## TODO
 - [x] Move Ramda to peer dep.
 - [x] Throw if `UA` is not passed in to `parse` as `ua-parser-js` fallsback to `window.navigator.userAgent` in a browser env.
-- [ ] Add helper functions for popular browsers / engines and operating systems.
+- [x] Add helper functions for popular browsers.
+- [ ] Add helper functions for popular engines
+- [ ] Add helper functions for popular operating systems.
 - [ ] Document umd, cjs and esmodule builds.
 - [ ] Document API.
 - [ ] Provide more examples.
