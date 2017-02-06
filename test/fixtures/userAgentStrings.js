@@ -130,3 +130,5 @@ export const ANDROID_3_2_ANDROID_BROWSER_4_0_WEBKIT_534_13_SONY_XPERIA_TABLET_TA
 export const PLAYSTATION_3_SONY_PLAYSTATION_3_CONSOLE = 'Mozilla/5.0 (PLAYSTATION 3; 1.00)';
 export const PLAYSTATION_PORTABLE_SONY_PLAYSTATION_PORTABLE_CONSOLE = 'Mozilla/4.0 (PSP (PlayStation Portable); 2.00)';
 export const WINDOWS_MOBILE_6_1_IE_4_01_ZTE_E_N72_MOBILE = 'Mozilla/5.0 (ZTE-E_N72/N72V1.0.0B02;U;Windows Mobile/6.1;Profile/MIDP-2.0 Configuration/CLDC-1.1;320*240;CTC/2.0) IE/6.0 (compatible; MSIE 4.01; Windows CE; PPC)/UC Browser7.7.1.88';
+export const WINDOWS_PHONE_8_0_IEMOBILE_10_0_TRIDENT_6_0_NOKIA_LUMIA_810 = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 810)';
+export const WINDOWS_PHONE_10_0_EDGE_13_10586_EDGEHTML_13_10586_MICROSOFT_LUMIA_950 = 'Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586';
