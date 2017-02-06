@@ -32,6 +32,7 @@ import {
     isBrowserVersionLte,
     isChrome,
     isEdge,
+    isEdgeHTML,
     isEngineName,
     isEngineVersion,
     isEngineVersionGt,
@@ -39,6 +40,7 @@ import {
     isEngineVersionLt,
     isEngineVersionLte,
     isFirefox,
+    isGecko,
     isIE,
     isIEMobile,
     isMobileSafari,
@@ -50,7 +52,10 @@ import {
     isOSVersionLte,
     isOpera,
     isOperaMobile,
+    isPresto,
     isSafari,
+    isTrident,
+    isWebKit,
     parse
 } from 'bugz';
 ```
