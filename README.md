@@ -23,6 +23,7 @@ import {
     getOS,
     getOSName,
     getOSVersion,
+    isAndroid,
     isAndroidBrowser,
     isBrowserName,
     isBrowserVersion,
@@ -43,6 +44,8 @@ import {
     isGecko,
     isIE,
     isIEMobile,
+    isIOS,
+    isMacOS,
     isMobileSafari,
     isOSName,
     isOSVersion,
@@ -56,6 +59,8 @@ import {
     isSafari,
     isTrident,
     isWebKit,
+    isWindows,
+    isWindowsPhone,
     parse
 } from 'bugz';
 ```
@@ -111,8 +116,8 @@ MIT
 - [x] Move Ramda to peer dep.
 - [x] Throw if `UA` is not passed in to `parse` as `ua-parser-js` fallsback to `window.navigator.userAgent` in a browser env.
 - [x] Add helper functions for popular browsers.
-- [ ] Add helper functions for popular engines
-- [ ] Add helper functions for popular operating systems.
+- [x] Add helper functions for popular engines
+- [x] Add helper functions for popular operating systems.
 - [ ] Document umd, cjs and esmodule builds.
 - [ ] Document API.
 - [ ] Provide more examples.
