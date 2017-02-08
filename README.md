@@ -4,21 +4,21 @@ Composable user agent detection using [`Ramda`](http://ramdajs.com/), powered by
 
 ## Why?
 
-Because browsers have <s>bugs</s> bugz and feature detection isn't possible on the server.
+Because browsers have <s>bugs</s> bugz.
 
 > [MDN has some good advice about when and *when not* to use user agent detection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent).
 
 ## Yeah, but why another UA library?
 
-Bugz isn't really another library, it's just a light-weight* functional wrapper around [`ua-parser-js`](https://github.com/faisalman/ua-parser-js).
+Bugz isn't really another library, it's just a lightweight* functional wrapper around [`ua-parser-js`](https://github.com/faisalman/ua-parser-js).
 
 > \* for those already using Ramda.
 
 ## Install
 
 ```
-npm install ramda
-npm install bugz
+$ npm install ramda
+$ npm install bugz
 ```
 
 > Ramda is defined as a peer dependency meaning it needs to be defined in your own package.json.
@@ -70,6 +70,8 @@ if (isWindowsFirefoxLt3_7(window.navigator.userAgent)) {
 ```
 
 ## API
+
+> All functions are curried by default.
 
 **about** `(ua: string) → void`  
 Logs all information obtained from the user agent string to the console.
@@ -218,6 +220,41 @@ Returns whether or not the operating system is Windows Phone.
 **parse** `(ua: string) → { ua: string, browser: { name: string, version: string, majorVersion: string }, engine: { name: string, version: string }, os: { name: string, version: string }`  
 Returns all information obtained from the user agent string.
 
+## Module Formats
+
+### ES2015
+
+```js
+import { isBrowserName } from 'bugz';
+```
+
+> Unfortuantely tree shaking isn't particularly effective on Bugz because most exports are pure curried functions which [aren't currently susceptible to dead code elimination](https://github.com/rollup/rollup/issues/1263). Therefore, a modular CommonJS build is additionally offered.
+
+### CommonJS
+
+```js
+const bugz = require('bugz');
+```
+
+```js
+// Or modular for optimized builds
+const isBrowserName = require('bugz/isBrowserName');
+const isBrowserVersion = require('bugz/isBrowserVersion');
+```
+
+### UMD
+
+```html
+<script src="bugz.umd.js"></script>
+<script>
+    const isBrowserName = Bugz.isBrowserName;
+</script>
+```
+
+```js
+require(['bugz'], bugz => {});
+```
+
 ## License
 MIT
 
@@ -227,7 +264,7 @@ MIT
 - [x] Add helper functions for popular browsers.
 - [x] Add helper functions for popular engines
 - [x] Add helper functions for popular operating systems.
-- [ ] Document umd, cjs and esmodule builds.
+- [x] Document umd, cjs and esmodule builds.
 - [x] Document API.
 - [x] Provide more examples.
 - [ ] Add integration tests to test composability.
