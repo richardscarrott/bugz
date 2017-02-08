@@ -6,7 +6,7 @@ Composable user agent detection using [`Ramda`](http://ramdajs.com/), powered by
 
 Because browsers have <s>bugs</s> bugz.
 
-> [MDN has some good advice about when and *when not* to use user agent detection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent).
+> [MDN offers some good advice about when and *when not* to use user agent detection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent).
 
 ## Yeah, but why another UA library?
 
