@@ -1,6 +1,6 @@
 {
   "name": "bugz",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Composable User Agent Detection",
   "main": "bundle/bugz.umd.js",
   "module": "bundle/bugz.module.js",
