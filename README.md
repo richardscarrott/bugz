@@ -69,6 +69,10 @@ if (isWindowsFirefoxLt3_7(window.navigator.userAgent)) {
 }
 ```
 
+## Examples
+
+Further examples can be found [here](src/__tests__/composition.js).
+
 ## API
 
 > All functions are curried by default.
@@ -257,17 +261,3 @@ require(['bugz'], bugz => {});
 
 ## License
 MIT
-
-## TODO
-- [x] Move Ramda to peer dep.
-- [x] Throw if `UA` is not passed in to `parse` as `ua-parser-js` fallsback to `window.navigator.userAgent` in a browser env.
-- [x] Add helper functions for popular browsers.
-- [x] Add helper functions for popular engines
-- [x] Add helper functions for popular operating systems.
-- [x] Document umd, cjs and esmodule builds.
-- [x] Document API.
-- [x] Provide more examples.
-- [ ] Add integration tests to test composability.
-- [x] Hook up to Travis and Coveralls.
-- [x] Publish.
-- [ ] Review whether Ramda indeed does need to be a peerdep, i.e. it doesn't matter that it uses the exact same instance as the host app.
