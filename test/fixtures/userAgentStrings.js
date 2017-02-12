@@ -1,6 +1,8 @@
 export const WINDOWS_XP_ARORA_0_2_WEBKIT_523_15 = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; de-CH) AppleWebKit/523.15 (KHTML, like Gecko, Safari/419.3) Arora/0.2';
 export const WINDOWS_XP_AVANT__TRIDENT_4_0 = 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; GTB5; Avant Browser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)';
 export const MAC_OS_10_4_CAMINO_2_0_9_GECKO_1_9_0_19 = 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10.4; en; rv:1.9.0.19) Gecko/2011091218 Camino/2.0.9 (like Firefox/3.0.19)';
+export const MAC_OS_10_12_1_CHROME_56_0_2924_87_WEBKIT_537_36 = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36';
+export const WINDOWS_8_1_CHROME_33_0_1750_117_WEBKIT_537_36 = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36';
 export const WINDOWS_8_CHROME_20_0_1090_0_WEBKIT_536_6 = 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6';
 export const MAC_OS_10_7_3_CHROME_20_0_0_0_WEBKIT_536_11 = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.0.0 Safari/536.11';
 export const MAC_OS_10_7_3_CHROME_20_0_1132_57_WEBKIT_536_11 = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11';
@@ -132,3 +134,4 @@ export const PLAYSTATION_PORTABLE_SONY_PLAYSTATION_PORTABLE_CONSOLE = 'Mozilla/4
 export const WINDOWS_MOBILE_6_1_IE_4_01_ZTE_E_N72_MOBILE = 'Mozilla/5.0 (ZTE-E_N72/N72V1.0.0B02;U;Windows Mobile/6.1;Profile/MIDP-2.0 Configuration/CLDC-1.1;320*240;CTC/2.0) IE/6.0 (compatible; MSIE 4.01; Windows CE; PPC)/UC Browser7.7.1.88';
 export const WINDOWS_PHONE_8_0_IEMOBILE_10_0_TRIDENT_6_0_NOKIA_LUMIA_810 = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 810)';
 export const WINDOWS_PHONE_10_0_EDGE_13_10586_EDGEHTML_13_10586_MICROSOFT_LUMIA_950 = 'Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586';
+export const IOS_10_0_MOBILE_SAFARI_10_0_WEBKIT_602_1_38_APPLE_IPHONE_MOBILE = 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0 like Mac OS X) AppleWebKit/602.1.38 (KHTML, like Gecko) Version/10.0 Mobile/14A5297c Safari/602.1';
