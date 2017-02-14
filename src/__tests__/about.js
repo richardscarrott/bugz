@@ -12,7 +12,7 @@ import {
 } from '../../test/fixtures/userAgentStrings';
 
 describe('about', () => {
-  it('logs the browser, engine and os information', () => {
+  it('logs the return value of parse', () => {
     about(MAC_OS_10_7_3_CHROME_20_0_1132_57_WEBKIT_536_11);
     expect(console.table).toBeCalledWith('parse');
   });
