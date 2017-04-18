@@ -4,36 +4,65 @@ import {
   memoize,
   curry,
   length,
-  max,
+  map,
   split,
   equals as ramdaEquals,
   lte as ramdaLte,
   lt as ramdaLt,
   gte as ramdaGte,
-  gt as ramdaGt
+  gt as ramdaGt,
+  zipWith,
+  apply,
+  concat,
+  reduce,
+  pipe
 } from 'ramda';
 import sanitize from './sanitize';
 
-const getParts = compose(split('.'), sanitize);
+const padWithZeros = (n, arr) =>
+  concat( arr, Array.from(Array(n)).map( () => 0 ) )
 
-const compare = memoize((a, b) => {
-  const aParts = getParts(a);
-  const bParts = getParts(b);
-  const len = max(length(aParts), length(bParts));
-  let idx = 0;
-  while (idx < len) {
-    const aPart = parseInt(aParts[idx], 10) || 0;
-    const bPart = parseInt(bParts[idx], 10) || 0;
-    if (aPart === bPart) {
-      idx += 1;
-    } else if (aPart > bPart) {
-      return 1;
-    } else {
-      return -1;
-    }
-  }
-  return 0;
-});
+const padShortArray = ([arr1, arr2]) =>
+  (
+    (len1, len2) =>
+      len1 === len2
+        ? [arr1, arr2]
+        : len1 > len2
+            ? [ arr1, padWithZeros(len1 - len2, arr2) ]
+            : [ padWithZeros(len2 - len1, arr1), arr2 ]
+  )(
+    length(arr1), length(arr2)
+  );
+
+const getParts = pipe(
+  sanitize,
+  split('.'),
+  map(n => parseInt(n, 10) || 0)
+);
+
+const compare = memoize((a, b) =>
+  pipe(
+    map(getParts),
+    padShortArray,
+    apply(
+      zipWith(
+        (a, b) =>
+          a === b
+            ? 0
+            : a > b
+                ? 1
+                : -1
+      )
+    ),
+    reduce(
+      (result, comparison) =>
+        result === 0
+          ? comparison
+          : result,
+      0
+    )
+  )([a, b])
+);
 
 export const equals = curry(compose(ramdaEquals(__, 0), compare));
 export const lte = curry(compose(ramdaLte(__, 0), compare));
