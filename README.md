@@ -25,6 +25,8 @@ $ npm install bugz
 
 ## Usage
 
+https://repl.it/Nlm0/1
+
 ```js
 import { isOSName } from 'bugz';
 
