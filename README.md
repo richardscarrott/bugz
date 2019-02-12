@@ -263,3 +263,9 @@ require(['bugz'], bugz => {});
 
 ## License
 MIT
+
+## Thank you
+
+[![BrowserStack](browserstack.png)](https://www.browserstack.com/ "BrowserStack")
+
+[BrowserStack](https://www.browserstack.com/ "BrowserStack") for providing a free subscription to support cross browser testing.
